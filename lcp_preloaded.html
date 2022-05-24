@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <link rel="preload" href="https://placekitten.com/g/200/300">
+  </head>
+  <body>
+    <img data-src="https://placekitten.com/g/200/300">
+    <script>
+setTimeout(function() {
+  Array.from(document.querySelectorAll('img[data-src]')).forEach(img => {
+    img.src = img.dataset.src;
+  });
+}, 3000);
+    </script>
+  </body>
+</html>
